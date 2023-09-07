@@ -24,24 +24,32 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <section>
-    <div class="px-8 md:px-12 mx-auto max-w-7xl py-12 lg:py-32">
-      <ul
-        class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-x-3 gap-y-24 lg:gap-x-6">
-        {
-          posts.map((post) => (
-            <EntriesOne
-              url={"/posts/" + post.slug}
-              title={post.data.title}
-              description={post.data.description}
-              alt={post.data.title}
-              pubDate={post.data.pubDate.toString().slice(0, 10)}
-              author={post.data.author}
-              image={post.data.image.url}
-            />
-          ))
-        }
-      </ul>
+  <section class="space-y-20 py-20 sm:space-y-32 sm:py-20 bg-neutral-100 h-screen">
+  <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+    <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+      <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
+        <h1
+          class="font-display text-5xl tracking-tighter font-medium text-kotei-800">
+          Tag: {tag}
+        </h1>
+        <ul role="list" class="list-none  lg:grid-cols-2 grid grid-cols-1 mt-12 sm:grid-cols-2 gap-x-3 gap-y-24 lg:gap-x-4">
+
+          {
+              posts.map((post) => (
+                  <EntriesOne
+                    url={"/posts/" + post.slug}
+                    title={post.data.title}
+                    description={post.data.description}
+                    alt={post.data.title}
+                    pubDate={post.data.pubDate.toString().slice(0, 10)}
+                    author={post.data.author}
+                    image={post.data.image.url}
+                  />
+                ))
+            }
+        </ul>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 </BaseLayout>
