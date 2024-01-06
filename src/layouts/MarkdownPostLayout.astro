@@ -1,37 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-import { AstroSeo } from "@astrolib/seo";
 ---
-
-<AstroSeo title={frontmatter.title} description={frontmatter.description} canonical="https://www.lexingtonthemes.com" openGraph={{
-    url: "https://www.lexingtonthemes.com",
-    title: "Title}",
-    description: "{frontmatter.description}",
-    images: [
-      {
-        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Social open graph",
-        type: "image/jpeg",
-      },
-      {
-        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
-        width: 4096,
-        height: 4096,
-        alt: "Twitter open graph",
-        type: "image/jpeg",
-      },
-      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
-      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
-    ],
-    site_name: "YourSitesName",
-  }} twitter={{
-    handle: "@TwitterHandle",
-    site: "@site",
-    cardType: "summary_large_image",
-  }} />
 <BaseLayout>
   <section class="   bg-neutral-100">
     <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8 py-20">
@@ -42,8 +12,6 @@ import { AstroSeo } from "@astrolib/seo";
           </h1>
           <div class="prose-styles mt-4">
             <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-
-
             <p><em>{frontmatter.description}</em></p>
             <p>Written by: {frontmatter.author}</p>
             <div class="flex flex-wrap gap-3 mt-12 not-prose">
@@ -57,5 +25,4 @@ import { AstroSeo } from "@astrolib/seo";
         </div>
       </div>
   </section>
-
 </BaseLayout>
