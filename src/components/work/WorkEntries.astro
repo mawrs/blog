@@ -1,0 +1,13 @@
+---
+const { url, client, thumbnail } = Astro.props;
+---
+
+<a
+  href={url}
+  title={client}>
+  <img
+    class="h-full w-full"
+    src={thumbnail}
+    alt={client}
+  /></a
+>

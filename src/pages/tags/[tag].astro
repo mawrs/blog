@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import EntriesOne from "@/components/entries/EntriesOne.astro";
+import EntriesOne from "@/components/blog/EntriesOne.astro";
 import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
@@ -29,7 +29,7 @@ const { posts } = Astro.props;
     <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
       <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
         <h1
-          class="font-display text-5xl tracking-tighter font-medium text-kotei-800">
+          class="font-display text-5xl    font-medium text-kotei-800">
           Tag: {tag}
         </h1>
         <ul role="list" class="list-none  lg:grid-cols-2 grid grid-cols-1 mt-12 sm:grid-cols-2 gap-x-3 gap-y-24 lg:gap-x-4">
