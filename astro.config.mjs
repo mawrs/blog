@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx"; 
+import path from 'path';
 
 export default defineConfig({
   markdown: {
@@ -19,5 +20,12 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), mdx()],
   content: {
     collections: ['work', 'posts', 'about']
-  }
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@': path.resolve('./src'),
+      },
+    },
+  },
 });
