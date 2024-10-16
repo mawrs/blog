@@ -1,35 +1,40 @@
 import { defineCollection, z } from "astro:content";
-const work = defineCollection({
+
+const workCollection = defineCollection({
   schema: z.object({
-    client: z.string().optional(),
-    description: z.string().optional(),
-    website: z.string().optional(),
+    order: z.number().optional(),
+    client: z.string(),
+    description: z.string(),
+    website: z.string().url(),
     thumbnail: z.object({
       url: z.string(),
       alt: z.string(),
     }),
   }),
 });
-const infopages = defineCollection({
-  schema: z.object({
-    page: z.string(),
-  }),
-});
+
 const postsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
-    author: z.string(),
+    author: z.string().optional(),
+    tags: z.array(z.string()).optional(),
     image: z.object({
       url: z.string(),
       alt: z.string(),
     }),
-    tags: z.array(z.string()),
   }),
 });
+
+const about = defineCollection({
+  schema: z.object({
+    page: z.string(),
+  }),
+});
+
 export const collections = {
-  work: work,
-  infopages: infopages,
+  work: workCollection,
   posts: postsCollection,
+  about: about,
 };

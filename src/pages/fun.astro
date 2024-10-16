@@ -1,0 +1,58 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// Define your projects
+const projects = [
+  {
+    title: "PrePitch",
+    description: "Pre-seed prep for early-stage founders",
+    url: "https://prepitch.xyz/",
+    image: "/prepitch.png"
+  },
+  {
+    title: "New Careers",
+    description: "New, modern, and alternative career paths for college students",
+    url: "https://www.newcareers.fyi/",
+    image: "/newcareers.png"
+  },
+  {
+    title: "Audio Nexus",
+    description: "Audio Intelligence for call centers",
+    url: "https://www.audionexus.ai/",
+    image: "/audionexus.png"
+  }
+];
+---
+
+<BaseLayout>
+  <section class="bg-neutral-100">
+    <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8 py-20">
+      <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+        <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
+          <h1 class="font-display text-5xl font-medium text-kotei-800">
+            Fun
+          </h1>
+          <p class="mt-4 text-sm text-neutral-500">
+            Currently tinkering on some AI projects that pique my interest.
+          </p>
+          <ul class="grid grid-cols-1 mt-12 sm:grid-cols-2 gap-x-3 gap-y-12 lg:gap-x-4">
+            {projects.map((project) => (
+              <li class="relative flex flex-col items-start">
+                <div class="relative w-full aspect-[16/9] mb-4">
+                  <img src={project.image} alt={project.title} class="object-cover rounded-lg" />
+                </div>
+                <h2 class="text-xl font-semibold text-kotei-800">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a>
+                </h2>
+                <p class="mt-2 text-sm text-neutral-600">{project.description}</p>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" class="mt-4 text-sm font-medium text-kotei-600 hover:text-kotei-800">
+                  Visit {project.title} <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

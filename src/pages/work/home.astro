@@ -3,6 +3,24 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("work");
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import WorkEntries from "../../components/work/WorkEntries.astro";
+
+// Log all posts before sorting
+console.log("All posts:", allPosts.map(post => ({
+  client: post.data.client,
+  order: post.data.order,
+  keys: Object.keys(post.data)
+})));
+
+// Sort the posts based on the 'order' field
+const sortedPosts = allPosts.sort((a, b) => {
+  const orderA = typeof a.data.order === 'number' ? a.data.order : Infinity;
+  const orderB = typeof b.data.order === 'number' ? b.data.order : Infinity;
+  console.log(`Comparing ${a.data.client} (${orderA}) with ${b.data.client} (${orderB})`);
+  return orderA - orderB;
+});
+
+// Log the sorted order
+console.log("Sorted order:", sortedPosts.map(post => `${post.data.client}: ${post.data.order}`));
 ---
 
 <BaseLayout>
@@ -16,15 +34,15 @@ import WorkEntries from "../../components/work/WorkEntries.astro";
           </h1>
           <p class="mt-4 text-sm text-neutral-500">
             <span class="lgh:blocl">
-              We have a deep appreciation for our clients.</span
+              Several projects showcasing a diverse range of design challenges across different industries, from social media and fintech to insurance and age verification.</span
             >
             <span
-              >Take a peek at a few of our most recent projects showcased below</span
+              >Each project demonstrates the power of thoughtful design in transforming user experiences and driving business outcomes.</span
             >
           </p>
           <div class="grid grid-cols-2 lg:grid-cols-2 mt-12 gap-2">
             {
-              allPosts.slice().map((post) => (
+              sortedPosts.map((post) => (
                 <WorkEntries
                   url={"/work/" + post.slug}
                   client={post.data.client}

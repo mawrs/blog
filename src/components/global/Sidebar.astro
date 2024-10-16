@@ -1,16 +1,15 @@
 ---
 const navItems = [
-  { text: "Overview", href: "/system/overview" },
-  { text: "Style Guide", href: "/system/style-guide" },
-  {
-    text: "Buy Kotei",
-    href: "https://lexingtonthemes.lemonsqueezy.com/checkout/buy/2813ea13-f8f9-41e3-8f02-e5ac0cffefaa",
-  },
+  { text: "Work", href: "/work/home" },
+  { text: "Fun", href: "/fun" },
+  { text: "Blog", href: "/blog" },
+  { text: "About", href: "/about" },
 ];
 const socialLinks = [
-  { text: "X", href: "#_" },
-  { text: "Posts CV", href: "#_" },
-  { text: "GitHub", href: "#_" },
+  { text: "X", href: "https://twitter.com/mawrs" },
+  { text: "LinkedIn", href: "https://www.linkedin.com/in/mawrs/" },
+  { text: "GitHub", href: "https://github.com/mawrs" },
+  { text: "CV", href: "/resume.pdf" },
 ];
 ---
 
@@ -24,15 +23,18 @@ const socialLinks = [
         <a
           href="/"
           class="text-kotei-800">
-          Dezain Sutajio</a
+          Martin Tejeda</a
         >
         <h1
           class="mt-8 font-display text-5xl md:text-8xl font-medium text-kotei-800">
-          Kotei Studio
+          Product Designer
         </h1>
         <p class="mt-4 text-sm text-neutral-500">
-          We're a studio based in Fukuoka that specializes in creating beautiful
-          and simple brands for businesses that customers remember.
+          I'm currently designing for our venture studio at MDSV. By leveraging
+          cutting-edge AI tools and cross-disciplinary skills in UX/UI design
+          and front-end development, I craft innovative, intuitive digital
+          solutions that solve real user problems and leave a lasting
+          impression.
         </p>
         <ul
           class="mt-8"
@@ -60,7 +62,9 @@ const socialLinks = [
                 class="rounded-lg text-xs font-medium text-kotei-800 hover:text-kotei-1000"
                 href={item.href}
                 title={item.text}
-                aria-label={item.text}>
+                aria-label={item.text}
+                target="_blank"
+                rel="noopener noreferrer">
                 {item.text}
               </a>
             </p>

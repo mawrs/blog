@@ -1,0 +1,11 @@
+---
+import { getEntry } from "astro:content";
+import AboutLayout from "../layouts/AboutLayout.astro";
+
+const aboutEntry = await getEntry("about", "about");
+const { Content } = await aboutEntry.render();
+---
+
+<AboutLayout frontmatter={aboutEntry.data}>
+  <Content />
+</AboutLayout>
