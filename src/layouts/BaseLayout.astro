@@ -2,13 +2,15 @@
 import BaseHead from "@/components/BaseHead.astro";
 import Sidebar from "@/components/global/Sidebar.astro";
 ---
-<html lang="en" >
+<html lang="en">
   <head>
     <BaseHead />
   </head>
-  <body class="flex min-h-full flex-col bg-neutral-50">
+  <body class="flex min-h-full flex-col lg:flex-row bg-neutral-50">
     <Sidebar />
-    <slot />
+    <main class="flex-1 overflow-y-auto">
+      <slot />
+    </main>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
