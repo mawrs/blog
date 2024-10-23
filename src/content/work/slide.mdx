@@ -1,6 +1,6 @@
 ---
 client: Slide
-description: Revolutionizing the insurance claim process through user-centered design.
+description: Shaping Slide's new & improvedclaim process.
 website: https://www.slideinsurance.com/
 thumbnail:
   url: "/slide.png"
@@ -8,35 +8,128 @@ thumbnail:
 order: 3
 ---
 
-### Reimagining Insurance Claims
+### Background
 
-As the Lead Designer at Slide, I embarked on a transformative journey to overhaul the insurance claim process. Our mission was clear: to turn a traditionally complex and frustrating experience into one that was intuitive, efficient, and even empowering for our users.
+Slide Insurance, a Florida-based insurer, was preparing to acquire 163,000 policy holders from an incumbent who was going out of business. <span style="background-color: yellow;"> Slide approached Underbelly with a new challenge they were facing: Create a self-servied version of their 'File a Claim' process that would seamlessly integrate new and existing users, and that didn't require the need for a human representative.</span> This required a deep understanding of diverse user needs and an innovative approach to design.
 
-### Simplifying Complexity
+### First, We Sprint
 
-The insurance industry is notorious for its complexity, and the claims process is often the most daunting aspect for customers. At Slide, we faced a multifaceted challenge:
+To truly understand the main problem and the needs of our customer, my team and I embarked on a week-long trip to Tampa, Florida to meet with Slide's executive team and insurance experts.
 
-1. We needed to create a unified claim process that would cater to both new and existing users, each with different levels of familiarity with insurance procedures.
+<figure className="w-full">
+  <img
+    src="/slide_team.png"
+    alt="Slide's executive team"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Slide's executive team
+  </figcaption>
+</figure>
 
-2. The process had to gather comprehensive information without overwhelming users or consuming too much of their time.
 
-3. We had to translate complex insurance jargon into language that was accessible and understandable for the average user.
+<span style="background-color: yellow;">As a team of three (a full-stack developer, a product manager, and myself), we conducted the Google Ventures Design Sprint to rapidly ideate and validate our assumptions.</span>
 
-4. Our solution needed to be scalable, capable of accommodating future growth and product iterations.
+This consisted of a jam-packed 9-5 day, along with some late nights to distill our learnings from each day.
+<figure className="w-full">
+  <img
+    src="/slide_schedule.png"
+    alt="Design sprint schedule"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Design sprint schedule  
+  </figcaption>
+</figure>
 
-### Deep Understanding, Iterative Design
 
-To tackle these challenges, we adopted a comprehensive, user-centered approach:
+As the lead designer, my responsibilities included:
 
-1. User Research: We collaborated closely with claims representatives to gain deep insights into user pain points and expectations during the claim process. This research formed the foundation of our design decisions.
+- Conducting roundtable discussions with stakeholders to guide design decisions.
+- Creating wireframes, prototypes, and high-fidelity designs.
+- Collaborating closely with our developer to ensure technical feasibility and implementation of design elements.
+- Leading user testing sessions and incorporating feedback into design iterations.
+- Developing a scalable design system and ensuring consistency across the platform.
 
-2. Information Architecture Overhaul: Based on our research findings, we completely restructured the claim process flow. Our goal was to create a logical progression that felt natural and intuitive to users.
+### Adding some Constraints
 
-3. Content Simplification: Working hand-in-hand with product managers and insurance experts, we undertook the task of simplifying complex insurance concepts. We created a new lexicon that maintained accuracy while dramatically improving comprehension.
+As you may imagine, we came up with dozens of possible features and solution implementations for our core problem.
 
-4. Design System Development: We created a comprehensive, scalable design system. This ensured consistency across the platform and laid the groundwork for future updates and expansions.
+Ultimately, we had to narrow down our focus to a few key areas.
 
-5. Iterative Design and Testing: We implemented an agile design process, continuously refining our interface based on user feedback and testing results. This allowed us to rapidly iterate and improve our solution.
+<figure className="w-full">
+  <img
+    src="/slide_moscow.png"
+    alt="Key focus areas and constraints for Slide Insurance"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Key focus areas and constraints for our solution
+  </figcaption>
+</figure>
+
+
+As a collective, we agreed on a core user flow that had the necessary features to solve the problem, and that we could build in a week.
+
+<figure className="w-full mb-8">
+  <img
+    src="/slide_tracker.png"
+    alt="Core user flow diagram - top section"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Core user flow diagram - top section
+  </figcaption>
+</figure>
+
+<figure className="w-full">
+  <img
+    src="/slide_flow.png"
+    alt="Core user flow diagram - bottom section"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Core user flow diagram - bottom section
+  </figcaption>
+</figure>
+
+### Scalability and Future-Proofing
+
+Slide did not have a design system or UI kit for their existing application, so we decided to set them up with one. We utilized Tailwind
+to start componentizing some of the work we were doing. Tailwind was the framework of choice for our developer, and our stakeholders were happy with it.
+
+<figure className="w-full mb-8">
+  <img
+    src="/slide_styles.png"
+    alt="Tailwind styles applied to the UI"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Tailwind styles applied to the UI
+  </figcaption>
+</figure>
+
+<figure className="w-full mb-8">
+  <img
+    src="/slide_components.png"
+    alt="Compentizing our work for future uses"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Compentizing our work for future uses
+  </figcaption>
+</figure>
+
+<figure className="w-full">
+  <img
+    src="/slide_claim_flow.png"
+    alt="Claims flow with Tailwind styles applied"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Claims flow with Tailwind styles applied
+  </figcaption>
+</figure>
 
 <figure className="w-full">
   <img
@@ -49,33 +142,63 @@ To tackle these challenges, we adopted a comprehensive, user-centered approach:
   </figcaption>
 </figure>
 
+### End of Sprint Week
+
+On the fifth and final day of our design sprint, we conducted user testing sessions with five policy holders and three Slide executives. This step was crucial in validating our
+prototype and gathering real-world feedback. We set up two rooms: one for interviews and another for the sprint team to observe.
+
+As the lead designer, I prepared our prototype and crafted some interview questions to guide the sessions. We carefully observed user interactions, paying attention to both
+verbal and non-verbal cues. This process provided invaluable insights into the effectiveness of our claims process, helping us identify strengths and areas for
+improvement. The immediate feedback allowed us to quickly assess which ideas worked, which didn't, and informed our next steps for refining the product.
+
+<figure className="w-full mb-8">
+  <img
+    src="/slide_test.png"
+    alt="User testing session during design sprint"
+    className="w-full"
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    User testing session during design sprint
+  </figcaption>
+</figure>
+
+This was one of the most challenging things I've done in my design career, but it was also one of the most rewarding. Everyone came out of that room extremely
+satisfied with the results of the sprint, <span style="background-color: yellow;">and Slide even agreed to sign an adidtional 3-month contract to get the prototype into production.</span>
+
+<figure className="w-full">
+  <video
+    src="/tampa.mp4"
+    alt="Slide Insurance sprint week in Tampa, Florida"
+    className="w-full"
+    controls
+  />
+  <figcaption className="text-center mt-2 text-sm text-gray-600">
+    Our week-long design sprint with the Slide team in Tampa, Florida
+  </figcaption>
+</figure>
+
+### 3-Month Product Development Phase
+
+Following the sprint, I went back to managing my design team, but I continued to work closely with the Slide team to refine the product.
+
+This 3-month phase included:
+- Iterative Design Refinement: Weekly design reviews, continuous iteration based on user feedback, and optimization of user flows.
+- Development of Comprehensive Design System: Continuing to create a scalable design system using Tailwind CSS, including a component library and documented guidelines.
+- Cross-functional Collaboration and Testing: Working closely with engineering, product, and design teams to conducted regular user testing and A/B testing to optimize the claims process.
+- Performance, Accessibility, and Compliance: Ensuring fast load times, WCAG 2.1 AA compliance, and adherence to insurance industry regulations while maintaining a user-friendly interface.
+
 ### Efficiency, Satisfaction, and Trust
 
 The results of our efforts were transformative:
 
-- Streamlined Onboarding: We achieved an impressive 89% completion rate for the new claim process, indicating that users found it intuitive and manageable.
+- Self-Serviceability: We achieved an impressive 89% completion rate for the new claim process, indicating that users found it intuitive and manageable.
 
 - Time Efficiency: We dramatically reduced the average time to complete a claim from 20 minutes to just 8 minutes - a 60% improvement that significantly eased user frustration.
 
-- Soaring Satisfaction: Our Net Promoter Score (NPS) jumped from 32 to 58, a clear indication that users were not just tolerating the new process, but actively appreciating it.
+- Reduced Support Needs: Most important of all, we saw a 45% decrease in customer support calls related to the claim process. This not only indicated a more self-serviceable system but also translated to significant operational savings for Slide.
 
-- Reduced Support Needs: We saw a 45% decrease in customer support calls related to the claim process. This not only indicated a more self-serviceable system but also translated to significant operational savings for Slide.
+### Design-Driven Growth
 
-### The Power of User-Centered Design
+The success of this sprint + development phase demonstrates the critical role of design in driving business growth, enhancing user satisfaction, and creating scalable solutions. As Lead Designer, I'm proud to have guided this project from concept to implementation, delivering tangible results that positively impacted both users and the business.
 
-This project reinforced several crucial lessons:
-
-1. Simplicity is key: By focusing on making complex processes simple and intuitive, we not only improved user satisfaction but also increased efficiency and reduced errors.
-
-2. Language matters: The effort we put into simplifying insurance terminology paid off enormously in terms of user comprehension and confidence.
-
-3. Iterative design works: Our agile, feedback-driven approach allowed us to continually refine and improve our solution, resulting in a product that truly met user needs.
-
-4. Design impacts business: By improving the user experience, we not only increased customer satisfaction but also drove significant operational efficiencies for Slide.
-
-### Setting New Standards in InsurTech
-
-The success of this project has positioned Slide as a leader in user-centric insurance experiences. As we look to the future, we're excited to apply these lessons to other aspects of our product, continually pushing the boundaries of what's possible in InsurTech.
-
-By prioritizing user needs and leveraging the power of thoughtful design, we've shown that even the most complex processes can be made accessible and even enjoyable. This project has set a new standard not just for Slide, but for the insurance industry as a whole.
-
+Slide's new and improved claims process has positioned them to be one of the top insurance companies in Florida. <span style="background-color: yellow;">In fact, [Slide recently acquired the renewal rights for Farmers Insurance homeowners policies in the state](https://www.slideinsurance.com/press-release/slide-acquires-renewal-rights-for-farmers-insurance-homeowners-policies-in-florida). This added an additional 86,000 policy holders to their platform.</span>
