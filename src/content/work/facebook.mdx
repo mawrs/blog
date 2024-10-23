@@ -8,50 +8,136 @@ thumbnail:
 order: 1
 ---
 
+### What are Public Figures?
+
+On Facebook, people can engage with public figures that matter to them — from creators, authors, athletes and sports teams, to musicians, bands, journalists and celebrities.
+‍
+
+Currently, these public figures use a range of Facebook tools to connect with their communities. For example, Brittany Howard of the Alabama Shakes announced her debut solo album via a personal Note. Video creator David Dobrik has grown his fan base rapidly on Facebook through interacting with fans on his latest videos and building a connected fan group. And ABC News Chief Meteorologist Ginger Zee goes live often to share real-time updates with followers, covering major weather events like the recent heat waves.
+
+As of 2021, the goal is now to increase overall engagement between public figures and their audiences.
+
 ### Connecting Public Figures and Audiences on Facebook
 
-As a Product Designer on the Discovery & Distribution team at Facebook, I led a project that aimed to improve how public figures interacted with their audiences on the platform. Our mission was to build upon the moderate success of the public figure feature initiative first introduced in 2019 and create a more engaging, meaningful experience for both celebrities and their fans.
+As a Product Designer on the Discovery & Distribution team, I had the priveledge of building new features and improve existing tools to help public figures stay connected with their audiences.
 
-### Balancing Innovation and Familiarity
+Some notable features I worked on were:
 
-Our team faced a complex challenge: how could we significantly improve engagement between public figures and their audiences while working within the constraints of Facebook's existing design system? We needed to create something fresh and exciting without alienating users who were accustomed to Facebook's familiar interface.
+*   Admin Notifications Center: An entry point to custom settings, tabs, and highlights to allow admins of public figure accounts to have more control over their notifications and make it easier to find.
+*   Cross-Profile Notifications: A brand new concept, allowing admins of multiple public figures to view all their notifications at once.
+*   Top Fans: A new incentive to make it easier for fans to stand out when engaging with public figure content.
 
-Moreover, we had to navigate the intricacies of a multi-user system, considering the diverse needs of public figures, their dedicated fans, and casual users. Our goal was to increase engagement in a way that felt natural and valuable to all parties involved.
+Within these projects, I worked alongside Designers, UX Researchers, PMs, and a Product Design Manager who oversaw the work our team was completing.
 
-### Deep Understanding and Iterative Design
+As a newcomer to this team, <span style="background-color: yellow;">my initial challenge was striking the right balance between design exploration and recycling existing components from our Facebook Design System.</span> After all, one of Facebook's design principles is to <a href="https://www.facebook.com/notes/693790757917796/?_rdr" target="_blank" rel="noopener noreferrer">"reduce, reuse, don't redesign."</a>
 
-To tackle this challenge, we embarked on a journey of extensive research and rapid iteration. We began by collaborating closely with UX Researchers to gain deep insights into the behaviors and needs of both public figures and their audiences. This research formed the foundation of our design process.
 
-Armed with these insights, we conducted intensive design sprints. Our aim was to push the boundaries of Facebook's existing Design System while maintaining the platform's overall look and feel. We worked in agile sprints with Product Managers, rapidly prototyping and testing new features.
+### Admin Notifications Center
+
+Public figure accounts could receive upwards of 20,000 notifications in a single day, a tall order for anyone running that account. To improve the quality of life for the admins running these accounts, our team tested a new command center for notifications that would allow these admins to have an entry point to custom settings, tabs, and highlights designed just for them. 
+
+With solid understanding of the product goal, <span style="background-color: yellow;">I worked closely with our UX Researcher to put together a game plan for user testing. I came up with 10 variations of this new Notifications Center and presented them to my team over a period of two weeks. The goal was to narrow this down to two variations for proper A/B testing.</span>
+<figure>
+  <img
+    src="/notifications_center.png"
+    alt="Notifications Center design variations"
+    class="w-full rounded-lg"
+  />
+  <figcaption class="text-center mt-2 text-sm text-gray-600">
+    Various design iterations for the Notifications Center
+  </figcaption>
+</figure>
+
+Throughout my design explorations, I found myself asking questions like:
+
+*   Which tabs should be included?
+*   Should they be configurable by the admin?
+*   Should there be scrolling tabs off the screen?
+*   Will highlights be confusing if it's already configurable?
+
+Thanks to an awesome design team, I was able to land on two strong concepts for Notifications Center.
+<div class="grid grid-cols-1 gap-4">
+  <figure>
+    <img
+      src="/notifications_truncated.png"
+      alt="Dropdown menu for filtering notifications"
+      class="w-full rounded-lg"
+    />
+    <figcaption class="text-center mt-2 text-sm text-gray-600">
+      Truncated notifications, configurable by Admin
+    </figcaption>
+  </figure>
+  <figure>
+    <img
+      src="/scrolling_notifications.png"
+      alt="Static sub-tabs for notifications"
+      class="w-full rounded-lg"
+    />
+    <figcaption class="text-center mt-2 text-sm text-gray-600">
+      Static sub-tabs for notifications
+    </figcaption>
+  </figure>
+</div>
+A/B testing these designs involved a lot of collaboration with the UX Researchers to nail down the script as well as the data synthesizing process. <span style="background-color: yellow;">We eventually got our qualitative results from user testing, and the prominent, clearly labeled static sub-tabs was easiest to understand for users.</span>
 
 ### Top Fans and Enhanced Interaction Tools
 
-Our research and design process led us to two key innovations:
+As another way of engaging public figures and their audiences, our same team started experimenting with incentives that would highlight dedicated followers of public figures. This initiative aimed to make it easier for fans to stand out when engaging with content from their favorite public figures.
 
-1. Top Fan Designation: We implemented a system to identify and highlight highly engaged users as "top fans." This feature created a sense of community and encouraged more meaningful interactions within a public figure's audience.
+Shaping the work for this new initiative required full collaboration from myself, my design buddy, PM, and Product Design Manager to scope out the end-to-end flow for this feature. To get a functioning prototype up and running, we landed on the following must-have features:
 
-2. Enhanced Interaction Tools: We developed new tools that made it easier for public figures to engage with their audience, particularly their top fans. These tools were designed to foster more personal and authentic connections.
+*   Top Fan badges: Visual indicators displayed next to usernames of highly engaged followers
+*   Admin controls: Allowing public figures to manage their Top Fans, including options to remove or ban users
+*   User controls: Enabling fans to display or remove their Top Fan badge
+*   Notifications: Alerting users when they achieve Top Fan status
+
+Initially, it was unclear whether this "gamification" approach would be successful. <span style="background-color: yellow;">I was responsible for leading the design exploration of the Admin Controls and User Controls, while my design buddy took charge of the Top Fan Badge and Notifications.</span>
+
+The end-to-end flow was carefully mapped out to ensure a seamless experience for all users.
 
 <div class="grid grid-cols-2 gap-2">
   <figure>
     <img
-      src="/topfan_1.png"
-      alt="Top Fan designation"
+      src="/topfans_1.png"
+      alt="Admin entry point"
     />
-    <figcaption className="text-center mt-2">Top Fan designation</figcaption>
+    <figcaption className="text-center mt-2">Admin entry point</figcaption>
   </figure>
   <figure>
     <img
-      src="/topfan_2.png"
-      alt="Admin tools"
+      src="/topfans_2.png"
+      alt="Manage Top Fan badges"
     />
-    <figcaption className="text-center mt-2">Admin tools</figcaption>
+    <figcaption className="text-center mt-2">Manage Top Fan badges</figcaption>
   </figure>
 </div>
 
+<div class="grid grid-cols-2 gap-2">
+  <figure>
+    <img
+      src="/topfans_3.png"
+      alt="See all Top Fans"
+    />
+    <figcaption className="text-center mt-2">See all Top Fans</figcaption>
+  </figure>
+  <figure>
+    <img
+      src="/topfans_4.png"
+      alt="Remove Top Fan badges"
+    />
+    <figcaption className="text-center mt-2">Remove Top Fan badges</figcaption>
+  </figure>
+</div>
+
+Admin Controls and User Controls required a lot of understanding about the behaviors on the platform. I wouldn't have been able to design these features without the help of our UX Researcher, who was able to beautfilly distill all the data I needed to know for my designs.
+
+We managed to get a functioning prototype up and running, and through further user testing and design Crits, we refined the Top Fans feature to meet the needs of both public figures and their followers.
+
+With these design explorations, we were able to get a 360 degree view on this new initiative and get further validation from real users.
+
 ### Stronger Connections and Higher Engagement
 
-The results of our efforts were significant and measurable. We saw a 15% increase in overall engagement between public figures and their audiences. More impressively, there was a 25% increase in comments and reactions from designated top fans.
+The results of our efforts were pretty significant. <span style="background-color: yellow;">After several months of testing and refining, we saw a 15% increase in overall engagement between public figures and their audiences. More impressively, there was a 25% increase in comments and reactions from designated top fans.</span>
 
 But numbers only tell part of the story. We received overwhelmingly positive feedback from both public figures and regular users about the enhanced connection features. Public figures reported feeling more connected to their core audience, while fans expressed excitement about the increased opportunities for interaction with their favorite celebrities.
 
@@ -64,3 +150,11 @@ Moreover, we learned the value of deep user research in driving meaningful produ
 ### The Future of Social Connections
 
 The success of this project not only improved user experiences but also contributed to Facebook's broader goal of fostering more meaningful connections among its users. As we look to the future, we're excited to continue exploring new ways to bring people closer together through thoughtful, user-centered design.
+<figure>
+  <img
+    src="/topfans_live.png"
+    alt="Graph showing increased engagement after Top Fans feature implementation"
+  />
+  <figcaption className="text-center mt-2">A Top Fan engaging with Serena Williams</figcaption>
+</figure>
+
